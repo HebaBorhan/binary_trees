@@ -33,9 +33,10 @@ new_node->left = NULL;
 else
 {
 temp = parent->left;
-parent->left = NULL;
+parent->left = new_node;
 new_node->parent = parent;
 new_node->left = temp;
+temp->parent = new_node;
 }
 
 new_node->right = NULL;
