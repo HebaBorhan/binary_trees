@@ -26,9 +26,8 @@ new_node->left = NULL;
 }
 else
 {
-temp = parent->left;
-parent->left = NULL;
-new_node->left = temp;
+new_node->left = parent->left;
+new_node->left->parent = new_node;
 }
 
 new_node->parent = parent;
