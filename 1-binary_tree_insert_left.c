@@ -22,15 +22,16 @@ return (NULL);
 
 if (parent->left == NULL)
 {
+new_node->parent = parent;
 new_node->left = NULL;
 }
 else
 {
+new_node->parent = parent;
 new_node->left = parent->left;
 new_node->left->parent = new_node;
 }
 
-new_node->parent = parent;
 new_node->right = NULL;
 new_node->n = value;
 return (new_node);
