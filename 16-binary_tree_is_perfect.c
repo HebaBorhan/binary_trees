@@ -17,7 +17,7 @@ return (0);
 left_ht = binary_tree_height(tree->left);
 right_ht = binary_tree_height(tree->right);
 if (left_ht != right_ht)
-return 0;
+return (0);
 if (tree->left == NULL && tree->right == NULL)
 return (1);
 else if ((tree->left != NULL && tree->right == NULL) ||
@@ -25,7 +25,8 @@ else if ((tree->left != NULL && tree->right == NULL) ||
 return (0);
 else
 {
-checker = binary_tree_is_perfect(tree->left) && binary_tree_is_perfect(tree->right);
+checker = binary_tree_is_perfect(tree->left)
+&& binary_tree_is_perfect(tree->right);
 return (checker);
 }
 }
