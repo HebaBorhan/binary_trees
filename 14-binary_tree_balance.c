@@ -33,8 +33,8 @@ if (tree == NULL)
 {
 return (height);
 }
-left_ht = tree->left ? ((binary_tree_height(tree->left)) + 1) : 1;
-right_ht = tree->right ? ((binary_tree_height(tree->right)) + 1) : 1;
+left_ht = tree->left ? (binary_tree_height(tree->left)) : 0;
+right_ht = tree->right ? (binary_tree_height(tree->right)) : 0;
 height = (left_ht > right_ht) ? left_ht : right_ht;
-return (height);
+return (height + 1);
 }
