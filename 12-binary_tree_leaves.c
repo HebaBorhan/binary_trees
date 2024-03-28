@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
-* binary_tree_leaves - function that that counts the leaves
+* binary_tree_leaves - function that counts the leaves
 * in a binary tree
 * @tree: pointer to the root node of the tree
 *
@@ -13,7 +13,7 @@ if (tree == NULL)
 {
 return (leaves);
 }
-leaves += (!tree->left && !tree->right) ? 1 :0;
+leaves += (!tree->left && !tree->right) ? 1 : 0;
 left_tree = binary_tree_leaves(tree->left);
 right_tree = binary_tree_leaves(tree->right);
 leaves +=  left_tree + right_tree;
